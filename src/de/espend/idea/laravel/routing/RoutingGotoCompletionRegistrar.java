@@ -43,7 +43,8 @@ public class RoutingGotoCompletionRegistrar implements GotoCompletionRegistrar {
             if(parent != null && (
                 MethodMatcher.getMatchedSignatureWithDepth(parent, URL_GENERATOR) != null ||
                 PhpElementsUtil.isFunctionReference(parent, 0, "route") ||
-                PhpElementsUtil.isFunctionReference(parent, 0, "link_to_route")
+                PhpElementsUtil.isFunctionReference(parent, 0, "link_to_route") ||
+                PhpElementsUtil.isFunctionReference(parent, 0, "route2")
             )) {
                 return new RouteNameGotoCompletionProvider(parent);
             }
